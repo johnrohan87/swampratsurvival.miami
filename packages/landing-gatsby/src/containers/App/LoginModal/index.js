@@ -12,9 +12,9 @@ import Button from 'common/components/Button';
 import Image from 'common/components/Image';
 import LoginModalWrapper from './loginModal.style';
 import 'rc-tabs/assets/index.css';
-import LogoImage from 'common/assets/image/agency/logo.png';
-import LoginImage from 'common/assets/image/agency/login-bg.jpg';
-import GoogleLogo from 'common/assets/image/agency/google-icon.jpg';
+import LogoImage from 'common/assets/image/app/logo.png';
+import LoginImage from 'common/assets/image/app/login-bg.jpg';
+import GoogleLogo from 'common/assets/image/app/google-icon.jpg';
 
 const LoginModal = ({
   row,
