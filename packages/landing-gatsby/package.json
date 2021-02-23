@@ -1,7 +1,7 @@
 {
-  "name": "@superprops/gatsby",
+  "name": "@johnrohan87/swampratsurvival.miami",
   "private": true,
-  "description": "React Landing with Gatsby Static site generator.",
+  "description": "swampratsurvival.miami",
   "version": "8.0.0",
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
