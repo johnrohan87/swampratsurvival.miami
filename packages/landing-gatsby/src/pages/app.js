@@ -10,7 +10,15 @@ import {
 } from 'containers/App/app.style';
 import { ResetCSS } from 'common/assets/css/style';
 import Navbar from 'containers/App/Navbar';
-
+import DomainSection from 'containers/App/Banner';
+import FeatureSection from 'containers/App/FeatureSection';
+import ControllSection from 'containers/App/Control';
+import TestimonialSection from 'containers/App/Testimonial';
+import PartnerHistory from 'containers/App/PartnerHistory';
+import PaymentSection from 'containers/App/PaymentSection';
+import Footer from 'containers/App/Footer';
+import FeatureSlider from 'containers/App/FeatureSlider';
+import FeatureSliderTwo from 'containers/App/FeatureSliderTwo';
 import { DrawerProvider } from 'common/contexts/DrawerContext';
 import '@redq/reuse-modal/es/index.css';
 import SEO from 'components/seo';
@@ -59,7 +67,16 @@ export default () => {
               <Navbar />
             </DrawerProvider>
           </Sticky>
-          <h1>Hello from Swamp Rat Survival</h1>
+          <DomainSection />
+          <FeatureSection />
+          <ControllSection />
+          <ConditionWrapper id="keyfeature">
+            {innerWidth > 1100 ? <FeatureSlider /> : <FeatureSliderTwo />}
+          </ConditionWrapper>
+          <PartnerHistory />
+          <PaymentSection />
+          <TestimonialSection />
+          <Footer />
         </AppWrapper>
       </Fragment>
     </ThemeProvider>
