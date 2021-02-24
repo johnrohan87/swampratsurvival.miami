@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
+import { Link } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 import Sticky from 'react-stickynode';
 import { Modal } from '@redq/reuse-modal';
@@ -65,6 +66,7 @@ export default () => {
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
               <Navbar />
+              < Link to="/">Go to Home Page</Link>
             </DrawerProvider>
           </Sticky>
           <DomainSection />
