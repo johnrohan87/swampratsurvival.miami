@@ -2,7 +2,6 @@ import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
-import { GlobalDispatchContext, GlobalStateContext } from 'common/contexts/GlobalContext';
 import Box from 'common/components/Box';
 import Text from 'common/components/Text';
 import Heading from 'common/components/Heading';
@@ -34,10 +33,6 @@ const DomainSection = ({
   discountAmount,
   discountText,
 }) => {
-  const state = useContext(GlobalStateContext);
-  const dispatch = useContext(GlobalDispatchContext);
-  console.log(state);
-  console.log(dispatch);
 
   const Data = useStaticQuery(graphql`
     query {
@@ -60,10 +55,8 @@ const DomainSection = ({
         <Box {...row}>
           <Box {...col}>
             <Box>
-            <h2>{state.user ? "Loged in as " + state.user : "Not Loged In"}</h2>
-            <button type="button" onClick={() => {
-              dispatch({type: 'USER'})
-            }}>Update Store</button>
+            <h2>{/*state.user ? "Loged in as " + state.user : "Not Loged In"*/}</h2>
+            <button type="button" >Update Store</button>
               <DiscountWrapper>
                 <DiscountLabel>
                   <Text {...discountAmount} className="discountAmount" />
