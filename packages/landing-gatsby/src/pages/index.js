@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import store from '../store/index';
 import { Provider } from 'react-redux';
 import { Counter } from '../common/components/counter'
+import { EStore } from '../common/components/eStore'
 
 
 import ReactDOM from "react-dom";
@@ -76,6 +77,7 @@ export default ({data}) => {
           
           <Provider store={store}>
             <Counter />
+            <EStore />
             <h1>Hello from Swamp Rat Survival</h1>
             <h2>{/*state.user ? "Loged in as " + state.user : "Not Loged In"*/}</h2>
             
