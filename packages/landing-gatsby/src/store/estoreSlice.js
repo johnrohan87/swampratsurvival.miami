@@ -17,7 +17,7 @@ export const estoreSlice = createSlice({
       state.data = "Removed Data"
     },
     append: (state, action) => {
-      state.data += action.payload
+      state = {...state, estore: action.payload}
     }
   }
 })

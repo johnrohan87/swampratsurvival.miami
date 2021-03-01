@@ -5,13 +5,13 @@ import { add, remove, append } from '../../store/estoreSlice'
 
 export function EStore() {
   const eStoreData = useSelector(state => state.estore.data)
+  const tmpEStore = useSelector(state => state.estore)
   const dispatch = useDispatch()
 
   return (
     <div>
       <div>
         <span>E-Store --- Here!</span>
-        <span>{eStoreData}</span>
         <button
           aria-label="add"
           onClick={() => dispatch(add())}
@@ -30,7 +30,14 @@ export function EStore() {
         >
           Append
         </button>
+        <button
+          aria-label="console log data"
+          onClick={() => console.log(tmpEStore)}
+        >
+          console log data
+        </button>
       </div>
+      <span>{eStoreData}</span>
     </div>
   )
 }
