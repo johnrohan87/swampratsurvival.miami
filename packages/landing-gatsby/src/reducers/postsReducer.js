@@ -1,3 +1,4 @@
-export default () => {
-    return 123;
+export default (item) => {
+    console.log(item)
+    return item;
 };
