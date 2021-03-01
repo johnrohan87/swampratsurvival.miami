@@ -26,7 +26,7 @@ export function EStore() {
         </button>
         <button
           aria-label="append"
-          onClick={() => dispatch(append())}
+          onClick={() => dispatch(append(eStoreData))}
         >
           Append
         </button>
