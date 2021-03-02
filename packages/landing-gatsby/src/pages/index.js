@@ -2,13 +2,12 @@ import React, { useState, useEffect, Fragment } from 'react';
 import { Link } from "gatsby";
 import store from '../store/index';
 import { Provider } from 'react-redux';
-import { Counter } from '../common/components/counter'
-import { EStore } from '../common/components/eStore'
 
-
-import ReactDOM from "react-dom";
-import { createStore, applyMiddleware } from "redux";
-import thunk from 'redux-thunk';
+//import { Counter } from '../common/components/counter'
+//import { EStore } from '../common/components/eStore'
+//import ReactDOM from "react-dom";
+//import { createStore, applyMiddleware } from "redux";
+//import thunk from 'redux-thunk';
 
 import { ThemeProvider } from 'styled-components';
 import Sticky from 'react-stickynode';
@@ -55,11 +54,11 @@ function useWindowSize() {
 }
 
 export default ({data}) => {  
-  const size = process.browser && useWindowSize();
-  const innerWidth = process.browser && size.innerWidth;
-  const mapStateToProps = state => ({
+  //const size = process.browser && useWindowSize();
+  //const innerWidth = process.browser && size.innerWidth;
+  /*const mapStateToProps = state => ({
     darkMode: state.data.isDarkMode,
-  })
+  })*/
 
   return (
     <ThemeProvider theme={appTheme}>
@@ -76,8 +75,9 @@ export default ({data}) => {
           </Sticky>
           
           <Provider store={store}>
-            <Counter />
-            <EStore />
+            {/*<Counter />
+            <EStore />*/}
+
             <h1>Hello from Swamp Rat Survival</h1>
             <h2>{/*state.user ? "Loged in as " + state.user : "Not Loged In"*/}</h2>
             
