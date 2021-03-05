@@ -51,7 +51,7 @@ function useWindowSize() {
   return windowSize;
 }
 
-export default () => {
+export function App() {
   const size = process.browser && useWindowSize();
   const innerWidth = process.browser && size.innerWidth;
 
