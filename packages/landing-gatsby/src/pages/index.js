@@ -1,5 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
+
 //import { Link } from "gatsby";
+import { Router } from '@reach/router';
 import StoreProvider from '../common/components/storeProvider';
 import App from './app';
 
@@ -22,6 +24,7 @@ import SEO from 'components/seo';
 import EStore from '../common/components/eStore';
 import { PostsList } from '../common/components/Posts/postsList';
 import { AddPostForm } from '../common/components/Posts/addPostForm';
+import { SinglePostPage } from '../common/components/Posts/singlePostPage';
 
 function getSize() {
   return {
@@ -79,6 +82,9 @@ export default ({data}) => {
             <AddPostForm />
             < PostsList />
           </Fragment>
+          <Router>
+            <SinglePostPage path='/posts/:postId' />
+          </Router>
           
           <Footer />
         </AppWrapper>
