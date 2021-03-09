@@ -19,6 +19,9 @@ import Footer from 'containers/App/Footer';
 import '@redq/reuse-modal/es/index.css';
 import SEO from 'components/seo';
 
+import EStore from '../common/components/eStore';
+import { PostsList } from '../common/components/Posts/postsList';
+import { AddPostForm } from '../common/components/Posts/addPostForm';
 
 function getSize() {
   return {
@@ -69,8 +72,14 @@ export default ({data}) => {
             </DrawerProvider>
           </Sticky>
           
-          <App props={innerWidth} />
+          {/**  <App props={innerWidth} />*/}
+          <EStore />
 
+          <Fragment>
+            <AddPostForm />
+            < PostsList />
+          </Fragment>
+          
           <Footer />
         </AppWrapper>
       </Fragment>

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { add, remove, append } from '../../store/estoreSlice'
 //import styles from './Counter.module.css'
 
-export function EStore() {
+export default function EStore() {
   const eStoreData = useSelector(state => state.estore.data)
   const tmpEStore = useSelector(state => state.estore)
   const dispatch = useDispatch()
@@ -12,6 +12,7 @@ export function EStore() {
     <div>
       <div>
         <span>E-Store --- Here!</span>
+        <br />
         <button
           aria-label="add"
           onClick={() => dispatch(add())}
